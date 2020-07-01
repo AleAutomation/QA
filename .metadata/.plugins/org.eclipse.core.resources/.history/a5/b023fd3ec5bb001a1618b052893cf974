@@ -1,0 +1,14 @@
+package com.squadwde.next.map;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.squadwde.next.core.Driver;
+
+
+public class AnotacoesMap {
+	
+	public AnotacoesMap() {
+		PageFactory.initElements(Driver.getDriver(), this);
+	}
+	
+}

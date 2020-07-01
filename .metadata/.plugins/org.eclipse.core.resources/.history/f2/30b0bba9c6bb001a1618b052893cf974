@@ -1,0 +1,15 @@
+package com.squadwde.next.page;
+
+import com.squadwde.next.core.Driver;
+import com.squadwde.next.map.acessarAnotacaoMap;
+
+public class acessarAnotacoesPage extends acessarAnotacaoMap{
+
+	public void inicializarDriver() {
+		Driver.getDriver();
+		
+	}
+	
+	
+
+}

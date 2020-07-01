@@ -1,0 +1,22 @@
+package com.squadwde.next.steps;
+
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Entao;
+import cucumber.api.java.pt.Quando;
+
+public class acessarAnotacaoSteps {
+	
+	@Dado("^que eu acesse o anotacoes$")
+	public void que_eu_acesse_o_anotacoes() {
+		
+	}
+
+	@Quando("^eu clicar no botao Clique Aqui$")
+	public void eu_clicar_no_botao_Clique_Aqui() {
+	}
+
+	@Entao("^a pagina anotacoes deve aparecer$")
+	public void a_pagina_anotacoes_deve_aparecer() {
+	}
+
+}

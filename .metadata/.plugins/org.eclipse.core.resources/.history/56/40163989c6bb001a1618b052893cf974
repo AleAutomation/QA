@@ -1,0 +1,27 @@
+package com.squadwde.next.map;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.squadwde.next.core.Driver;
+
+
+public class AnotacoesMap {
+	
+	public AnotacoesMap() {
+		PageFactory.initElements(Driver.getDriver(), this);
+	}
+
+	@FindBy(id = "iframe")
+	protected WebElement iframe;
+	
+	@FindBy(className = "nxt-btn-ok-modal")
+	protected WebElement btnCliqueAqui;
+	
+	@FindBy(xpath = "//h3[text()='Erro!']")
+	protected WebElement textErro;
+	
+	@FindBy(className = "nxt-btn-ok-modal ng-star-inserted")
+	protected WebElement btnFechar;
+}

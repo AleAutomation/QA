@@ -1,0 +1,7 @@
+#language: pt
+Funcionalidade: Acessar o localhost Anotacoes
+
+  Cenario: Acessar Anotacoes
+    Dado que eu acesse o anotacoes
+    Quando eu clicar no botao Clique Aqui
+    Então a pagina anotacoes deve aparecer
