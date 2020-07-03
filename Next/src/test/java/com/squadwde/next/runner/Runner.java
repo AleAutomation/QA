@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/features/acessarAnotacao.feature",
 		glue = { "com.squadwde.next.steps",  "com.squadwde.next.core"},
-		tags = { "@anotacao" },
+		tags = { "@wde" },
 		monochrome = true,
 		dryRun = false,
 		strict= true)

@@ -1,0 +1,17 @@
+package com.squadwde.next.page;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+
+import com.squadwde.next.core.WinDriverPage;
+
+public class WdeLoginPage {
+	
+	WinDriverPage winPage = new WinDriverPage();
+	
+	
+
+}

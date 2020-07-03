@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner (1)" project="Next" tests="4" started="4" failures="0" errors="2" ignored="3">
+  <testsuite name="com.squadwde.next.runner.Runner" time="2.741">
+    <testsuite name="Funcionalidade: Acessar o localhost Anotacoes" time="2.741">
+      <testsuite name="Cenario: Acessar WDE" time="0.138" incomplete="true">
+        <error>java.lang.NullPointerException&#13;
+	at com.squadwde.next.core.WinDriverPage.openTool(WinDriverPage.java:28)&#13;
+	at com.squadwde.next.page.WdeLoginPage.abrirWde(WdeLoginPage.java:13)&#13;
+	at com.squadwde.next.steps.WdeLoginSteps.queEuAcesseWDEDesktop(WdeLoginSteps.java:19)&#13;
+	at ✽.Dado que eu acesse o WDE Desktop(src/test/resources/features/acessarAnotacao.feature:12)&#13;
+&#13;
+</error>
+        <testcase name="Dado que eu acesse o WDE Desktop" classname="Cenario: Acessar WDE" time="0.125">
+          <error>java.lang.NullPointerException&#13;
+	at com.squadwde.next.core.WinDriverPage.openTool(WinDriverPage.java:28)&#13;
+	at com.squadwde.next.page.WdeLoginPage.abrirWde(WdeLoginPage.java:13)&#13;
+	at com.squadwde.next.steps.WdeLoginSteps.queEuAcesseWDEDesktop(WdeLoginSteps.java:19)&#13;
+	at ✽.Dado que eu acesse o WDE Desktop(src/test/resources/features/acessarAnotacao.feature:12)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Quando eu inserir os dados" classname="Cenario: Acessar WDE" time="0.0" ignored="true"/>
+        <testcase name="E eu clicar em Conectar" classname="Cenario: Acessar WDE" time="0.0" ignored="true"/>
+        <testcase name="Entao o Wde deve ser acessado com sucesso" classname="Cenario: Acessar WDE" time="0.291" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

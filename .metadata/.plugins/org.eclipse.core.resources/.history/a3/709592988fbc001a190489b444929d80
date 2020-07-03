@@ -1,0 +1,18 @@
+package com.squadwde.next.page;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+
+public class WdeLoginPage {
+	
+	public void abrirWDE() throws MalformedURLException {
+		DesktopOptions option = new DesktopOptions();
+		option.setApplicationPath("C:\\Users\\alexsandroramos\\Desktop\\WDE - SIT\\InteractionWorkspace.exe");
+		
+		WiniumDriver winDriver = new WiniumDriver(new URL("http://localhost:9999"), option);
+	}
+
+}

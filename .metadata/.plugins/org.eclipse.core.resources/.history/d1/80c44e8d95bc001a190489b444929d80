@@ -1,0 +1,10 @@
+package com.squadwde.next.model;
+
+public class WdeLoginModel {
+
+	private String usuario;
+	private String senha;
+	private String servidor;
+	private String porta;
+}
+|usuario| senha		| servidor					| porta	|

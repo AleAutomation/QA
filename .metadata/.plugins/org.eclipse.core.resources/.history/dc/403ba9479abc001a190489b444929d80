@@ -1,0 +1,36 @@
+package com.squadwde.next.core;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.winium.DesktopOptions;
+import org.openqa.selenium.winium.WiniumDriver;
+import org.openqa.selenium.winium.WiniumDriverService;
+import org.openqa.selenium.winium.WiniumOptions;
+
+public class WinDriverPage {
+	
+	
+	public static void openTool(String diretorio) throws IOException {
+		DesktopOptions option = new DesktopOptions();
+		option.setApplicationPath(diretorio);
+		WiniumDriver winDriver = new WiniumDriver(new URL("http:localhost:9999"), option);
+		
+	}
+	
+	
+	public void clicarBotao(By by) {
+		winDriver.findElement(by).click();
+	}
+	
+	
+	public void escreverTexto(By by, String texto) {
+		winDriver.findElement(by).sendKeys(texto);
+	}
+	
+	public void limparCampo(By by) {
+		winDriver.findElement(by).clear();
+	}
+}

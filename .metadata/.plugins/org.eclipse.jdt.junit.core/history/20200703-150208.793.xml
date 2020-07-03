@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Runner (1)" project="Next" tests="4" started="4" failures="0" errors="2" ignored="3">
+  <testsuite name="com.squadwde.next.runner.Runner" time="0.356">
+    <testsuite name="Funcionalidade: Acessar o localhost Anotacoes" time="0.356">
+      <testsuite name="Cenario: Acessar WDE" time="0.0" incomplete="true">
+        <error>org.openqa.selenium.UnsupportedCommandException: 'setTimeout' is not valid or implemented command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NBBV030999', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.winium.WiniumDriver
+Capabilities {app: C:/Users/alexsandroramos/De..., args: , debugConnectToRunningApp: false, innerPort: 9998, javascriptEnabled: true, keyboardSimulator: 1, launchDelay: 0, platform: ANY, platformName: ANY}
+Session ID: AwesomeSession&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)&#13;
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)&#13;
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)&#13;
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.winium.WiniumDriverCommandExecutor.execute(WiniumDriverCommandExecutor.java:78)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:780)&#13;
+	at com.squadwde.next.core.WinDriverPage.openTool(WinDriverPage.java:29)&#13;
+	at com.squadwde.next.page.WdeLoginPage.abrirWde(WdeLoginPage.java:13)&#13;
+	at com.squadwde.next.steps.WdeLoginSteps.queEuAcesseWDEDesktop(WdeLoginSteps.java:19)&#13;
+	at ✽.Dado que eu acesse o WDE Desktop(src/test/resources/features/acessarAnotacao.feature:12)&#13;
+&#13;
+</error>
+        <testcase name="Dado que eu acesse o WDE Desktop" classname="Cenario: Acessar WDE" time="0.0">
+          <error>org.openqa.selenium.UnsupportedCommandException: 'setTimeout' is not valid or implemented command. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NBBV030999', ip: '192.168.0.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.winium.WiniumDriver
+Capabilities {app: C:/Users/alexsandroramos/De..., args: , debugConnectToRunningApp: false, innerPort: 9998, javascriptEnabled: true, keyboardSimulator: 1, launchDelay: 0, platform: ANY, platformName: ANY}
+Session ID: AwesomeSession&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)&#13;
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)&#13;
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)&#13;
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.winium.WiniumDriverCommandExecutor.execute(WiniumDriverCommandExecutor.java:78)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:780)&#13;
+	at com.squadwde.next.core.WinDriverPage.openTool(WinDriverPage.java:29)&#13;
+	at com.squadwde.next.page.WdeLoginPage.abrirWde(WdeLoginPage.java:13)&#13;
+	at com.squadwde.next.steps.WdeLoginSteps.queEuAcesseWDEDesktop(WdeLoginSteps.java:19)&#13;
+	at ✽.Dado que eu acesse o WDE Desktop(src/test/resources/features/acessarAnotacao.feature:12)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="Quando eu inserir os dados" classname="Cenario: Acessar WDE" time="0.0" ignored="true"/>
+        <testcase name="E eu clicar em Conectar" classname="Cenario: Acessar WDE" time="0.0" ignored="true"/>
+        <testcase name="Entao o Wde deve ser acessado com sucesso" classname="Cenario: Acessar WDE" time="0.355" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

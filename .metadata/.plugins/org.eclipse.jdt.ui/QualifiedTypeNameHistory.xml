@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="cucumber.api.java.pt.Entao"/>
-<fullyQualifiedTypeName name="cucumber.api.java.pt.Quando"/>
-<fullyQualifiedTypeName name="cucumber.api.java.pt.Dado"/>
 <fullyQualifiedTypeName name="com.squadwde.next.page.acessarAnotacoesPage"/>
 <fullyQualifiedTypeName name="com.squadwde.next.core.Driver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
@@ -17,4 +14,24 @@
 <fullyQualifiedTypeName name="org.junit.AfterClass"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="org.junit.After"/>
+<fullyQualifiedTypeName name="cucumber.api.DataTable"/>
+<fullyQualifiedTypeName name="cucumber.api.java.pt.Entao"/>
+<fullyQualifiedTypeName name="cucumber.api.java.pt.Quando"/>
+<fullyQualifiedTypeName name="cucumber.api.java.pt.Dado"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="com.squadwde.next.core.WinDriverPage"/>
+<fullyQualifiedTypeName name="com.squadwde.next.page.WdeLoginPage"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ById"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="com.squadwde.next.model.WdeLoginModel"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.winium.DesktopOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.winium.WiniumOptions"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="cucumber.runtime.Timeout"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.TimeoutException"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.winium.WiniumDriverService.Builder"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.winium.WiniumDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.winium.WiniumDriverService"/>
 </qualifiedTypeNameHistroy>
