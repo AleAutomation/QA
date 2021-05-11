@@ -11,7 +11,7 @@ Funcionalidade: Acessar o localhost Anotacoes
   Cenario: Acessar WDE
   	Dado que eu acesse o WDE Desktop
   	Quando eu inserir os dados
-  	|usuario| senha		| servidor					| porta	|
-  	|I932550| testejul|wde_favoritesremoto|2030		|
+  	|usuario| senha		| servidor		| porta	|
+  	|I931750| testemai|wde_cloud_tu	|2030		|
   	E eu clicar em Conectar
   	Entao o Wde deve ser acessado com sucesso

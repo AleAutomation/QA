@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -56,4 +57,18 @@ public class WinDriverPage {
 	public void limparCampo(By by) {
 		winDriver.findElement(by).clear();
 	}
+	
+	public void aguardarElementoClicavelAparecer(By by, long tempo) {
+		WebDriverWait wait = new WebDriverWait(winDriver, tempo);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+	}
+	
+	public void clickEnter(By by) {
+		winDriver.findElement(by).sendKeys(Keys.ENTER);
+	}
+	
+	/*public void aguardarElementoAparecer(By by, long tempo) {
+		WebDriverWait wait = new WebDriverWait(winDriver, tempo);
+		wait.until(ExpectedConditions.visibilityOf(by));
+	}*/
 }

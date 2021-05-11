@@ -19,6 +19,14 @@ public class WdeLoginPage {
 		winPage.escreverTexto(By.id("passwordBoxPassword"), wdeLoginModels.getSenha());
 		winPage.clicarBotao(By.id("HeaderSite"));
 		winPage.clicarBotao(By.name("Conectar"));
+		winPage.aguardarElementoClicavelAparecer(By.id("HamburgerButton"), 20);
+		winPage.clicarBotao(By.id("HamburgerButton"));
+		winPage.aguardarElementoClicavelAparecer(By.id("ContactDirectory"), 10);
+		winPage.clicarBotao(By.id("ContactDirectory"));
+		winPage.aguardarElementoClicavelAparecer(By.id("QuickSearchTextBox"), 5);
+		winPage.escreverTexto(By.id("QuickSearchTextBox"), "Next");
+		winPage.clickEnter(By.id("QuickSearchTextBox"));
+		
 	}
 	
 

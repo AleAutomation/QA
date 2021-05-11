@@ -26,6 +26,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -37,10 +38,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="br.com.next.Adesao"/>
 		</list>
 		<list key="groupId">
+			<item value="br.com.next"/>
 		</list>
 		<list key="artifactId">
+			<item value="Adesao"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,12 +60,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.squadwde.next"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="Next"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
