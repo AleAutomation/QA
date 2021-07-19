@@ -15,6 +15,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\alexsandroramos\eclipse-workspace\Adesao\src\test\java\br\com\next\Adesao\model\Apps.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -38,13 +39,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="br.com.next.Adesao"/>
 		</list>
 		<list key="groupId">
-			<item value="br.com.next"/>
 		</list>
 		<list key="artifactId">
-			<item value="Adesao"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -60,10 +58,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="next"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="frontatendimento"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

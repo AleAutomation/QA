@@ -24,8 +24,10 @@ public class ValidarCriacaoAdesaoTests extends BaseTest{
 	private static String deviceSignature = "{\"deviceSignature\":{\"collector\":\"Android\",\"collectorVersion\":\"8.2.2\",\"system\":{\"platform\":\"Android23\",\"androidId\":\"dee820dffff3bd2f\",\"osVersion\":\"6.0.1\",\"deviceName\":\"C103\",\"model\":\"C103\",\"board\":\"c1\",\"brand\":\"Coolpad\",\"host\":\"pcnbj-cp063\",\"id\":\"ZIXOSOP5801803011S\",\"type\":\"user\",\"user\":\"letv\",\"cpuAbi\":\"arm64-v8a\",\"cpuAbi2\":null,\"hardware\":\"qcom\",\"manufacturer\":\"Coolpad\",\"serial\":\"db318f5\",\"tags\":\"release-keys\",\"locale\":\"portuguÃªs (Brasil)\",\"radio\":\"C10_201702281858-10.140.35.30 \",\"processName\":\"br.com.bradesco.next\",\"systemName\":\"Android OS\",\"jailBroken\":false,\"timeZone\":\"America/Belem\",\"debuggerAttached\":false,\"totalDiskSpace\":\"24056\",\"totalMemory\":3607,\"numberOfProcessors\":8},\"screen\":{\"displayId\":\"ZIXOSOP5801803011S release-keys\",\"width\":\"1080\",\"height\":\"1920\",\"orientation\":\"1\"},\"browser\":{\"userAgent\":\"Dalvik 2.1.0 (Linux; U; Android 6.0.1; C103 Build ZIXOSOP5801803011S)\"},\"wifi\":{\"connected\":true,\"macAddress\":\"02:00:00:00:00:00\",\"ipAddress\":\"192.168.1.69\",\"netmaskAddress\":\"255.255.255.0\",\"gatewayAddress\":\"192.168.1.254\",\"broadcastAddress\":\"192.168.1.255\",\"userEnabled\":true},\"telephony\":{\"imeiNumber\":null,\"carrierIsoCountryCode\":\"br\",\"carrierName\":\"TIM\",\"carrierMobileCountryCode\":null,\"simOperatorName\":\"TIM\",\"carrierMobileNetworkCode\":\"02\",\"networkType\":\"GPRS\",\"phoneType\":\"GSM\",\"simIsoCountryCode\":\"br\",\"isRoamingNetwork\":false,\"cellIpAddress\":null,\"simSerialNumber\":null,\"subscriberId\":null},\"camera\":{\"numberOfCameras\":null,\"rearCamera\":null,\"frontCamera\":null,\"autoFocus\":null,\"flash\":null,\"rearCameraSupportedSizes\":null,\"rearCameraSupportedFormats\":null,\"frontCameraSupportedSizes\":null,\"frontCameraSupportedFormats\":null},\"bluetooth\":{\"supported\":true,\"macAddress\":\"02:00:00:00:00:00\"},\"extra\":{\"account\":null,\"securityPolicy\":true},\"location\":{\"latitude\":-22.534503,\"longitude\":-43.2116745}},\"ipAddress\":\"192.168.1.69\"}";
 	private static String userPasswordToken = "ER6TMcrSLnVNh7W0w50IC/I5vBoDCkCFWZDQqUOD3IzfMjaXsb5cma//VM8cUzR8AAAAAAAAAAHDLqJidJhFft3aflirvGciLXY1lksRnCFyLrLJeWc0Fw6tTP4mRVzk9UoW/Wapx3w9h2vcJn88+YTdl1MFBsZ7HzuLV/oX0cLgMtyOHVbyAYoyPxlRxJNWNminMPWm0tv8uraEBTI6A6J33D5iy+0N3hD1vBjDPNwex2lAB7bA2pUtiGuhW21uFLU4LeVv+I4CeSlKCSWKsAU+dTQxaGdQ";
 	
+	
 	Gson gson = (new GsonBuilder()).create();
 	ApiLoginModel apiLoginModel = new ApiLoginModel();
+	ApiLoginModel getbodyLogin = new ApiLoginModel();
 	Apps apps = new Apps();
 	List<Apps> appsList = new ArrayList<Apps>();
 	LoginSignatureModel loginSignModel = new LoginSignatureModel();
@@ -136,7 +138,7 @@ public class ValidarCriacaoAdesaoTests extends BaseTest{
 		String jsonApiLogin = gson.toJson(apiLoginModel);
 		System.out.println(jsonApiLogin);
 		
-		given()
+		getbodyLogin = given()
 			.headers("coreIP", "pbi-21105")
 			.headers("deviceSignature", deviceSignature)
 			.headers("cpfDeviceRegistration", cpf)
@@ -147,6 +149,7 @@ public class ValidarCriacaoAdesaoTests extends BaseTest{
 		.then()
 			.log().all()
 			.statusCode(200)
+			.extract().body().as(ApiLoginModel.class)
 		;
 		
 	}

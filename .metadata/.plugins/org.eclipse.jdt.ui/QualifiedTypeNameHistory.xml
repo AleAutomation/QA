@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.squadwde.next.page.acessarAnotacoesPage"/>
-<fullyQualifiedTypeName name="com.squadwde.next.core.Driver"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-<fullyQualifiedTypeName name="com.squadwde.next.steps.acessarAnotacaoSteps"/>
 <fullyQualifiedTypeName name="com.squadwde.next.map.AnotacoesMap"/>
 <fullyQualifiedTypeName name="com.squadwde.next.core.BasePage"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="com.squadwde.next.core.Utils"/>
 <fullyQualifiedTypeName name="org.junit.AfterClass"/>
-<fullyQualifiedTypeName name="org.junit.After"/>
 <fullyQualifiedTypeName name="cucumber.api.DataTable"/>
 <fullyQualifiedTypeName name="cucumber.api.java.pt.Entao"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
@@ -18,7 +13,6 @@
 <fullyQualifiedTypeName name="org.openqa.selenium.By.ById"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="com.squadwde.next.model.WdeLoginModel"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.winium.DesktopOptions"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.winium.WiniumOptions"/>
 <fullyQualifiedTypeName name="java.sql.Time"/>
@@ -38,7 +32,6 @@
 <fullyQualifiedTypeName name="br.com.next.Adesao.steps.validarCriacaoAdesaoSteps"/>
 <fullyQualifiedTypeName name="br.com.next.Adesao.tests.validarCriacaoAdesaoTests"/>
 <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-<fullyQualifiedTypeName name="br.com.next.Adesao.tests.ValidarCriacaoAdesaoTests"/>
 <fullyQualifiedTypeName name="javax.net.ssl.SSLException"/>
 <fullyQualifiedTypeName name="io.restassured.specification.ResponseSpecification"/>
 <fullyQualifiedTypeName name="io.restassured.builder.ResponseSpecBuilder"/>
@@ -52,8 +45,19 @@
 <fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
 <fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
 <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
-<fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="br.com.next.Adesao.core.BaseTest"/>
 <fullyQualifiedTypeName name="org.junit.runners.Suite.SuiteClasses"/>
 <fullyQualifiedTypeName name="br.com.next.Adesao.core.Constantes"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="br.com.next.Adesao.tests.ValidarCriacaoAdesaoTests"/>
+<fullyQualifiedTypeName name="com.google.gson.Gson"/>
+<fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
+<fullyQualifiedTypeName name="br.com.next.Adesao.model.Apps"/>
+<fullyQualifiedTypeName name="br.com.next.Adesao.model.DeviceModel"/>
+<fullyQualifiedTypeName name="br.com.next.Adesao.model.LoginSignatureModel"/>
+<fullyQualifiedTypeName name="br.com.next.Adesao.model.ApiLoginModel"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.junit.After"/>
 </qualifiedTypeNameHistroy>
