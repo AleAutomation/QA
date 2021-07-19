@@ -23,6 +23,16 @@ public class Utils {
 		}
 	}
 	
+	public static void logPass(String strMensagem) {
+		ExtentTest extentTest = Hooks.getExtentTest();
+		extentTest.log(Status.PASS, strMensagem);
+	}
+	
+	public static void logFail(String strMensagem) {
+		ExtentTest extentTest = Hooks.getExtentTest();
+		extentTest.log(Status.FAIL, strMensagem);
+	}
+	
 	private static void efetuarPrintTela(String strLog) {
 		File srcFile = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.FILE);
 		try {

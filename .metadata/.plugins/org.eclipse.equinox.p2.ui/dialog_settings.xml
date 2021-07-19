@@ -12,7 +12,7 @@
 		<item key="ShowLatestVersionsOnly" value="true"/>
 		<item key="HideInstalledContent" value="true"/>
 		<item key="ResolveInstallWithAllSites" value="true"/>
-		<item key="FilterOnEnv" value="false"/>
+		<item key="FilterOnEnv" value="true"/>
 		<item key="AvailableNameColumnWidth" value="450"/>
 		<item key="AvailableVersionColumnWidth" value="240"/>
 		<item key="AvailableListSashWeight" value="800"/>

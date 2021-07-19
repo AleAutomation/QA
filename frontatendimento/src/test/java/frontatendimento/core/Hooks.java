@@ -9,6 +9,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
+
 public class Hooks {
 	
 	private static ExtentHtmlReporter htmlReport;
@@ -29,8 +30,13 @@ public class Hooks {
 		
 	@After
 	public void afterCenario(Scenario cenario) {
-		extentTest.log(Status.PASS, "Cenário: " + cenario.getName() + " executado com sucesso!");
+		if(cenario.isFailed()) {
+		extentTest.log(Status.FAIL, "Cenário: " + cenario.getName() + " executado com falhas!");
 		extentReport.flush();
+		}else {
+			extentTest.log(Status.PASS, "Cenário: " + cenario.getName() + " executado com sucesso!");
+			extentReport.flush();			
+		}
 	}
 	
 	public static ExtentTest getExtentTest() {
