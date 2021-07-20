@@ -19,6 +19,8 @@ public class ValidarCategoriasTratativasBackOfficeSteps {
 
 	@Quando("^eu filtrar as opcoes das categorias BackOffice (.*) e (.*) e (.*)$")
 	public void euFiltrarAsOpcoesDasCategoriasBackOffice(String jornada, String prodServico, String assunto) throws Throwable {
+		tratBoPage.validarJornadaProdServicoAssuntoBO(jornada, prodServico, assunto);
+		Utils.logPrint("Categorias BackOffice");
 
 	}
 

@@ -4,6 +4,7 @@ package frontatendimento.core;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -71,5 +72,27 @@ public class BasePage extends Driver {
 	
 	public void sairFrame() {
 		getDriver().switchTo().defaultContent();
+	}
+	
+	public String selecionarOpcaoLista(String categoria) {
+		List<WebElement> linhas = getDriver().findElements(By.xpath("//ul[@class='ngx-select__choices dropdown-menu ng-star-inserted show']/li"));
+		String valor = "";
+		for (int i = 0; i <= linhas.size(); i++) {
+			if(linhas.get(i).getText().equalsIgnoreCase(categoria)) {
+				valor = linhas.get(i).getText();
+				linhas.get(i).click();
+				break;
+			}
+		}
+		return valor;
+	}
+	
+	public void threadSleep(long milisegundos) {
+		try {
+			Thread.sleep(milisegundos);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

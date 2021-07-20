@@ -2,14 +2,15 @@ package frontatendimento.core;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.Before;
 
 public class Driver {
 	private static WebDriver driver;
 	
+	@Before
 	public static WebDriver getDriver() {
 		if(driver == null) {
 			createDriver();
@@ -25,11 +26,12 @@ public class Driver {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	
+/*
 	public static void killDriver() {
 		if(driver != null) {
 			driver.quit();
 			driver = null;
 		}
 	}
+*/
 }

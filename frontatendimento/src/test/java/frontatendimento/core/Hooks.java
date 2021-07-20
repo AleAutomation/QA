@@ -1,5 +1,7 @@
 package frontatendimento.core;
 
+import org.openqa.selenium.WebDriver;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -11,7 +13,6 @@ import cucumber.api.java.Before;
 
 
 public class Hooks {
-	
 	private static ExtentHtmlReporter htmlReport;
 	private static ExtentReports extentReport;
 	private static ExtentTest extentTest;

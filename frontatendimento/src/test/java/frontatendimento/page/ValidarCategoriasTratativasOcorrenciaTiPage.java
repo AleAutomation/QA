@@ -7,30 +7,25 @@ import frontatendimento.core.Driver;
 import frontatendimento.core.Utils;
 import frontatendimento.map.ValidarCategoriasTratativasBoTiMap;
 
-public class ValidarCategoriasTratativasBackOfficePage extends ValidarCategoriasTratativasBoTiMap{
-	
-	public ValidarCategoriasTratativasBackOfficePage() {
+public class ValidarCategoriasTratativasOcorrenciaTiPage extends ValidarCategoriasTratativasBoTiMap{
+	public ValidarCategoriasTratativasOcorrenciaTiPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
 	BasePage basePage = new BasePage();
-
-	public void logarTratativas(String login, String senha) {
+	
+	public void loginTratativasOcorrenciasTi(String login, String senha) {
 		basePage.aguardarElementoAparecer(userTratativas, 10);
 		basePage.escrever(userTratativas, login);
 		basePage.escrever(senhaTratativas, senha);
 		basePage.clicarBtn(btnConfirmar);
-		basePage.aguardarElementoAparecer(abaBackOffice, 10);
-		if(basePage.pegarTexto(abaBackOffice).equalsIgnoreCase("Backoffice")) {
-			Utils.logPass("Login BackOffice");
-		}else {
-			Utils.logFail("Login BackOffice falhou!");
-		}
 	}
-	
-	public void validarJornadaProdServicoAssuntoBO(String jornada, String prodServico, String assunto) {
+	public void validarJornadaProdServicoAssuntoTi(String jornada, String prodServico, String assunto) {
+		basePage.aguardarElementoClicavelAparecer(abaOcorrenciaTi, 10);
 		basePage.threadSleep(2000);
-		basePage.clicarBtn(btnBuscaAvancada);
+		basePage.clicarBtn(abaOcorrenciaTi);
+		basePage.threadSleep(2000);
+		basePage.clicarBtn(buscaAvancadaOcorrenciaTi);
 		basePage.clicarBtn(jornadaTratativas);
 		String validarJornada = basePage.selecionarOpcaoLista(jornada);
 		if(validarJornada.equalsIgnoreCase(jornada)) {
@@ -53,5 +48,4 @@ public class ValidarCategoriasTratativasBackOfficePage extends ValidarCategorias
 			Utils.logFail("Erro ao selecionar as categorias");
 		}		
 	}
-		
 }
