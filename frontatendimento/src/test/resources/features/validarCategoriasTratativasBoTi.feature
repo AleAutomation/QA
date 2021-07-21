@@ -3,7 +3,8 @@
 
 @Tratativas
 Funcionalidade: Validar as categorias do Tratativas
-  Quero validar as categorias disponíveis nos selects Jornada Produto/Servico e Assunto 
+  Quero validar as categorias disponíveis nos selects Jornada Produto/Servico e Assunto
+  
 
   @BackOffice
   Esquema do Cenario: Validar Categorias BackOffice
