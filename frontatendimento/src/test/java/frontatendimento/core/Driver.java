@@ -12,7 +12,7 @@ public class Driver {
 	
 	public static WebDriver getDriver() {
 		if(driver == null) {
-			createIeDriver();
+			createChromeDriver();
 		}
 		return driver;
 	}
@@ -22,7 +22,7 @@ public class Driver {
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.navigate().to("https://telasnegocio.stf.tu.aznxt.local/central-relacionamento-web/moldura/moldura.xhtml");
+		driver.navigate().to("https://telasnegocio.stf.tu.aznxt.local/tratamentoocorrencias/ocorrencias/tratamento-de-ocorrencia.shtml");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
@@ -34,12 +34,11 @@ public class Driver {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-/*
+
 	public static void killDriver() {
 		if(driver != null) {
 			driver.quit();
 			driver = null;
 		}
 	}
-*/
 }

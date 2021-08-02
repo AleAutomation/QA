@@ -40,24 +40,26 @@ public class ValidarCategoriasTPABoTiPage extends ValidarCategoriasTPABoTiMap im
 
 	public void acessarOcorrenciasTPA() {
 		basePage.sairFrame();
-		basePage.aguardarElementoAparecer(maisInfos, 10);
-		basePage.clicarBtn(maisInfos);
-		basePage.aguardarElementoAparecer(contParaWeb, 5);
-		basePage.clicarBtn(contParaWeb);
-		basePage.aguardarElementoAparecer(inputToken, 10);
-		basePage.escrever(inputToken, token);
-		basePage.clicarBtn(btnTelas20);
-		basePage.rolarParaCima();
-		basePage.acessarDoisFrames(moldura, tn2tpa);
+		basePage.aguardarElementoAparecer(btnRedirecionar, 10);
+		basePage.escrever(funcionalidadeEmulador, "2");
+		basePage.escrever(textAreaToken, token);
+		basePage.clicarBtn(btnRedirecionar);
+		basePage.aguardarElementoAparecer(frameContainer, 10);
+		if(basePage.isDisplayed(frameContainer)) {
+			basePage.acessarFrame(frameContainer);
+			basePage.clicarBtn(btnFecharContainer);
+		}
+		basePage.sairFrame();
+		basePage.acessarDoisFrames(frameContainer, myIframe);
+		basePage.aguardarElementoDesaparecer(spinnerThreeBounce, 10);
+		basePage.sairFrame();
+		basePage.acessarFrame(frameContainer);
 		basePage.aguardarElementoClicavelAparecer(abaOcorrencias, 15);
-		basePage.threadSleep(2000);
 		basePage.clicarBtn(abaOcorrencias);
 		basePage.sairFrame();
-		basePage.acessarTresFrames(moldura, tn2tpa, myIframe);
-		basePage.aguardarElementoAparecer(abaHistoricoOcorrencias, 10);
-		basePage.clicarBtn(abaHistoricoOcorrencias);
-		
-		
+		basePage.acessarDoisFrames(frameContainer, myIframe);
+		basePage.aguardarElementoAparecer(checkBackOffice, 10);
+		basePage.clicarBtn(checkBackOffice);
 	}
 
 }

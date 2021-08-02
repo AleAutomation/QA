@@ -25,10 +25,12 @@ public class Hooks implements Constantes{
 	private static ExtentHtmlReporter htmlReport;
 	private static ExtentReports extentReport;
 	private static ExtentTest extentTest;
+	
+	Driver driver = new Driver();
 		
 	@Before
 	public void beforeCenario(Scenario cenario) {
-		
+		Driver.getDriver();
 		baseURI = APP_BASE_URL;
 		port = APP_PORT;
 		basePath = APP_BASE_PATH;
@@ -62,6 +64,7 @@ public class Hooks implements Constantes{
 		
 	@After
 	public void afterCenario(Scenario cenario) {
+		Driver.killDriver();
 		if(cenario.isFailed()) {
 		extentTest.log(Status.FAIL, "Cenário: " + cenario.getName() + " executado com falhas!");
 		extentReport.flush();

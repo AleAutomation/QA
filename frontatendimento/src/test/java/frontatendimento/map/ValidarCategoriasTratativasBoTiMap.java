@@ -14,7 +14,9 @@ public class ValidarCategoriasTratativasBoTiMap {
 	@FindBy(id = "mat-tab-label-0-0")
 	protected WebElement abaBackOffice;
 	@FindBy(xpath = "//button[text()=' Busca Avançada ']")
-	protected WebElement btnBuscaAvancada;
+	protected WebElement btnBuscaAvancadaBo;
+	@FindBy(xpath = "//button[text()='Busca Avançada']")
+	protected WebElement btnBuscaAvancadaTi;	
 	@FindBy(xpath = "//span[text()='JORNADA']")
 	protected WebElement jornadaTratativas;
 	@FindBy(xpath = "//span[text()='PRODUTO/SERVIÇO']")

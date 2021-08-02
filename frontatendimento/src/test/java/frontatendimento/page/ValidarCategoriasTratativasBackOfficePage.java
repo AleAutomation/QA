@@ -20,17 +20,40 @@ public class ValidarCategoriasTratativasBackOfficePage extends ValidarCategorias
 		basePage.escrever(userTratativas, login);
 		basePage.escrever(senhaTratativas, senha);
 		basePage.clicarBtn(btnConfirmar);
+	}
+	
+	public void selecionarAba(String abaTratativas) {
+		switch (abaTratativas) {
+		case "Backoffice":
 		basePage.aguardarElementoAparecer(abaBackOffice, 10);
 		if(basePage.pegarTexto(abaBackOffice).equalsIgnoreCase("Backoffice")) {
 			Utils.logPass("Login BackOffice");
+			basePage.threadSleep(2000);
+			basePage.clicarBtn(btnBuscaAvancadaBo);
 		}else {
 			Utils.logFail("Login BackOffice falhou!");
 		}
+		break;
+		
+		case "Ocorrência/TI":
+			basePage.aguardarElementoAparecer(abaOcorrenciaTi, 10);
+			basePage.threadSleep(2000);
+			basePage.clicarBtn(abaOcorrenciaTi);
+			if(basePage.pegarTexto(abaOcorrenciaTi).equalsIgnoreCase("Ocorrência/TI")) {
+				Utils.logPass("Login OcorrênciaTI");
+				basePage.threadSleep(2000);
+				basePage.clicarBtn(btnBuscaAvancadaTi);
+			}else {
+				Utils.logFail("Login OcorrênciaTI falhou!");
+			}
+			break;
+			
+		default: 
+			System.out.println("Não foi possível selecionar a aba");
+		}
 	}
 	
-	public void validarJornadaProdServicoAssuntoBO(String jornada, String prodServico, String assunto) {
-		basePage.threadSleep(2000);
-		basePage.clicarBtn(btnBuscaAvancada);
+	public void validarJornadaProdServicoAssuntoBO(String jornada, String produtoServicos, String assunto) {
 		basePage.clicarBtn(jornadaTratativas);
 		String validarJornada = basePage.selecionarOpcaoLista(jornada);
 		if(validarJornada.equalsIgnoreCase(jornada)) {
@@ -39,19 +62,21 @@ public class ValidarCategoriasTratativasBackOfficePage extends ValidarCategorias
 			Utils.logFail("Erro ao selecionar as categorias");
 		}
 		basePage.clicarBtn(prodServicoTratativas);
-		String validarprodServico = basePage.selecionarOpcaoLista(prodServico);
-		if(validarprodServico.equalsIgnoreCase(prodServico)) {
+		String validarprodServico = basePage.selecionarOpcaoLista(produtoServicos);
+		if(validarprodServico.equalsIgnoreCase(produtoServicos)) {
 			Utils.logPass("Produto/Serviço selecionado");
 		}else {
 			Utils.logFail("Erro ao selecionar as categorias");
 		}		
 		basePage.clicarBtn(assuntoTratativas);
+		
 		String validarAssunto = basePage.selecionarOpcaoLista(assunto);
 		if(validarAssunto.equalsIgnoreCase(assunto)) {
 			Utils.logPass("Assunto selecionado");
 		}else {
 			Utils.logFail("Erro ao selecionar as categorias");
-		}		
+		}
+		
 	}
 		
 }

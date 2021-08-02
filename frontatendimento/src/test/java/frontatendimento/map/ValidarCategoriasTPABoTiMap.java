@@ -15,15 +15,28 @@ public class ValidarCategoriasTPABoTiMap {
 	protected WebElement btnTpa;
 	@FindBy(id = "btnCallTn2")
 	protected WebElement btnTelas20;
-	@FindBy(xpath = "//li[@class='menu__list-options__item ng-star-inserted'][4]")
+	@FindBy(xpath = "//a[text()='Ocorrências']")
 	protected WebElement abaOcorrencias;
 	@FindBy(id = "myIframe")
 	protected WebElement myIframe;
-	@FindBy(xpath = "//section[@class='brq-create-occurrence-container']//span[text()='Histórico']")
+	@FindBy(xpath = "//span[text()='Histórico']")
 	protected WebElement abaHistoricoOcorrencias;
 	@FindBy(id = "tn2tpa")
 	protected WebElement tn2tpa;
 	@FindBy(id = "moldura")
 	protected WebElement moldura;
-	
+	@FindBy(id = "func")
+	protected WebElement funcionalidadeEmulador;
+	@FindBy(id = "textAreaToken")
+	protected WebElement textAreaToken;
+	@FindBy(xpath = "//button[text()='Redirecionar']")
+	protected WebElement btnRedirecionar;
+	@FindBy(id = "frame-container")
+	protected WebElement frameContainer;
+	@FindBy(xpath = "//div[@class='modal-close ng-star-inserted']//button[text()='FECHAR']")
+	protected WebElement btnFecharContainer;
+	@FindBy(xpath = "//span[text()='BackOffice']")
+	protected WebElement checkBackOffice;
+	@FindBy(xpath = "//div[@class='spinner-three-bounce']")
+	protected WebElement spinnerThreeBounce;
 }

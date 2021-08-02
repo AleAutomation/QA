@@ -7,9 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/features/validarCategoriasTPABoTi.feature",
+		features = "src/test/resources/features/validarCategoriasTratativasBoTi.feature",
 		glue = { "frontatendimento.steps", "frontatendimento.core"},
-		tags = { "@tpaBackOffice" },
+		tags = { "@Tratativas" },
 		monochrome = true,
 		dryRun = false,
 		strict= true)

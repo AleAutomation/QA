@@ -5,21 +5,33 @@
 Funcionalidade: Validar as categorias do Tratativas
   Quero validar as categorias disponíveis nos selects Jornada Produto/Servico e Assunto
   
+  Contexto:
+    Dado que eu acesse o Tratativas com os dados
+    |login	|senha		|
+    |I931150|testeago	| 
+  
+  
 
   @BackOffice
-  Esquema do Cenario: Validar Categorias BackOffice
-    Dado que eu acesse o Tratativas com o <login> e <senha>
-    Quando eu filtrar as opcoes das categorias BackOffice <jornada> e <prodServico> e <assunto>
+  Cenario: Validar Categorias BackOffice
+  	Quando eu acessar a aba BackOffice
+  	|abaTratativasBo|
+  	|Backoffice			|
+    Quando eu filtrar as opcoes das categorias do Tratativas
+    |jornada			|produtoServicos	|assunto|
+    |INVESTIMENTOS|POUPANÇA					|DIVERGENCIA DE VALORES	|
+    |PORTABILIDADE|OBJETIVOS				|APLICAÇÃO							|
+    |PARCERIAS		|OUTROS						|RESGATE								|
     Entao as categorias devem estar com os seus respectivos dados corretos
-    Exemplos:
-    |login	|senha		|jornada|prodServico			|assunto										|
-    |I931650|testejul	|Adesão	|Abertura de Conta| Dúvidas sobre documentação| 
     
   @OcorrenciaTi
-  Esquema do Cenario: Validar Categorias OcorrenciaTi
-    Dado que eu acesse o Tratativas OcorrenciasTi com o <loginTi> e <senhaTi>
-    Quando eu filtrar as opcoes das categorias de OcorrenciaTi <jornadaTi> e <prodServicoTi> e <assuntoTi>
+  Cenario: Validar Categorias OcorrenciaTi
+  	Quando eu acessar a aba OcorrenciaTi
+  	|abaTratativasTi|
+  	|Ocorrência/TI	|
+    Quando eu filtrar as opcoes das categorias de OcorrenciaTi
+    |jornadaTi						|produtoServicosTi|assuntoTi																							|
+    |ATM									|SENHA						|OUTROS																									|
+    |Parcerias DisneyPlus	|DisneyPlus - Site|Erro no direcionamento para o site: NEXT.ME/DISNEYPLUS	|
+    |Aplicativo						|Funcionalidades	|Não está atualizando o telefone celular								|
     Entao as categorias da OcorrenciaTi devem estar com os seus respectivos dados corretos
-    Exemplos:
-    |loginTi	|senhaTi		|jornadaTi							|prodServicoTi			|assuntoTi																							|
-    |I931550	|testejul		|Parcerias DisneyPlus		|DisneyPlus - Site	| Erro no direcionamento para o site: NEXT.ME/DISNEYPLUS|

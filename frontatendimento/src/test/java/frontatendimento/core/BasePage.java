@@ -3,6 +3,7 @@ package frontatendimento.core;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -37,6 +38,10 @@ public class BasePage extends Driver {
 	public void aguardarElementoAparecer(WebElement element, long tempo) {
 		WebDriverWait wait = new WebDriverWait(getDriver(), tempo);
 		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void aguardarElementoDesaparecer(WebElement element, long tempo) {
+		getDriver().manage().timeouts().setScriptTimeout(tempo, TimeUnit.SECONDS);
 	}
 
 	public void retornarLista(WebElement element) {
@@ -98,6 +103,10 @@ public class BasePage extends Driver {
 			}
 		}
 		return valor;
+	}
+	
+	public void validarOpcoesNoSelect() {
+		List<WebElement> linhas = getDriver().findElements(By.xpath("//ul[@class='ngx-select__choices dropdown-menu ng-star-inserted show']/li"));
 	}
 	
 	public void threadSleep(long milisegundos) {

@@ -9,13 +9,13 @@ public class ValidarCategoriasTPABoTiSteps {
 	
 	ValidarCategoriasTPABoTiPage ocorrenciaBoTiPage = new ValidarCategoriasTPABoTiPage();
 	
-	@Dado("^que eu acesse a TPA$")
-	public void queEuAcesseTPA() throws Throwable {
+	@Dado("^que eu acesse a tela de ocorrencias na TPA$")
+	public void queEuAcesseTelaDeOcorrenciasNaTPA() throws Throwable {
 		ocorrenciaBoTiPage.gerarTokenTpa();
 		ocorrenciaBoTiPage.acessarOcorrenciasTPA();
 	}
 
-	@Quando("^eu filtrar as opcoes das categorias (.*) e (.*) e (.*)$")
+	@Quando("^eu filtrar as opcoes das categorias na TPA (.*) e (.*) e (.*)$")
 	public void euFiltrarAsOpcoesDasCategorias(String jornada, String prodServico, String assunto) throws Throwable {
 
 	}
